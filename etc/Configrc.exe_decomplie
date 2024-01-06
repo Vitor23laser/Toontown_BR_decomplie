@@ -1,8 +1,3 @@
-load-display pandadx9
-aux-display pandadx9
-aux-display pandadx8
-aux-display pandagl
-aux-display tinydisplay
 cull-bin gui-popup 60 unsorted
 want-render2dp 1
 text-encoding utf8
@@ -15,13 +10,15 @@ paranoid-clock 1
 lock-to-one-cpu 1
 collect-tcp 1
 collect-tcp-interval 0.2
-server-version sv1.4.33.0
+server-version sv1.4.40.32
 server-version-suffix 
 cull-bin shadow 15 fixed
-cull-bin ground 14 fixed 
+cull-bin ground 14 fixed
+model-path      .
+sound-path      .
+plugin-path     .
 dc-file phase_3/etc/toon.dc
 dc-file phase_3/etc/otp.dc
-plugin-path .
 window-title Toontown
 verify-ssl 0
 ssl-cipher-list RC4-MD5
@@ -58,6 +55,17 @@ notify-level-chan warning
 notify-level-gobj warning
 notify-level-loader warning
 notify-timestamp #t
+vfs-mount phase_3.mf . 0
+vfs-mount phase_3.5.mf . 0
+vfs-mount phase_4.mf . 0
+vfs-mount phase_5.mf . 0
+vfs-mount phase_5.5.mf . 0
+vfs-mount phase_6.mf . 0
+vfs-mount phase_7.mf . 0
+vfs-mount phase_8.mf . 0
+vfs-mount phase_9.mf . 0
+vfs-mount phase_10.mf . 0
+vfs-mount phase_11.mf . 0
 default-model-extension .bam
 decompressor-step-time 0.5
 extractor-step-time 0.5
