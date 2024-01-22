@@ -21,7 +21,7 @@ dc-file phase_3/etc/toon.dc
 dc-file phase_3/etc/otp.dc
 window-title Toontown
 verify-ssl 0
-ssl-cipher-list RC4-MD5
+ssl-cipher-list DEFAULT
 http-preapproved-server-certificate-filename ttown4.online.disney.com:46667 phase_3/etc/gameserver.txt
 chan-config-sanity-check #f
 require-window 0
