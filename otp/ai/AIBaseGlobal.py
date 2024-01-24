@@ -15,7 +15,7 @@ __builtins__['loader'] = simbase.loader
 directNotify.setDconfigLevels()
 
 def inspect(anObject):
-    from import direct.tkpanels import Inspector
+    from direct.tkpanels import Inspector
     Inspector.inspect(anObject)
 
 
