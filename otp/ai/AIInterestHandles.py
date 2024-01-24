@@ -1,5 +1,3 @@
-# File: A (Python 2.4)
-
 PIRATES_CARDGAME = 1
 PIRATES_CREW = 2
 PIRATES_GUILD = 3
