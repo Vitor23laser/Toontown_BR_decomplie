@@ -1,5 +1,5 @@
 import string
-from otp.otpbase.portuguese.OTPLocalizer_portuguese_Property import *
+from otp.otpbase.portuguese.OTPLocalizer_Property import *
 
 # common locations
 lTheBrrrgh = 'O Brrrgh'
@@ -665,6 +665,9 @@ SCMenuBattleStrategy = "ESTRATÉGIA"
 SCMenuBoardingGroup              = "BOARDING"
 SCMenuParties                    = "PARTIES"
 SCMenuAprilToons                 = "APRIL TOONS'"
+SCMenuSingingGroup               = "SINGING"
+SCMenuSillyHoliday                   = "SILLY METER"
+SCMenuVictoryParties             = "VICTORY PARTIES"
 
 # FriendSecret.py
 FriendSecretNeedsPasswordWarningTitle = "Controles disponíveis aos pais"
@@ -696,11 +699,53 @@ FriendSecretDetermineSecretAvatarRollover = "A friend only in this game"
 FriendSecretDetermineSecretAccount = "Account"
 FriendSecretDetermineSecretAccountRollover = "A friend across the Disney.com network"
 
+# GuildMember.py
+GuildMemberTitle = "Member Options"
+GuildMemberPromote = "Make Officer"
+GuildMemberGM = "Make Guildmaster"
+GuildMemberDemote = "Demote"
+GuildMemberKick = "Eject Member"
+GuildMemberCancel = "Cancel"
+GuildMemberOnline = "has come online."
+GuildMemberOffline = "has gone offline."
+GuildPrefix = "(G):"
+GuildNewMember = "New Guild Member"
+
+# GuildInvitee.py
+GuildInviteeOK = lOK
+GuildInviteeNo = lNo
+GuildInviteeInvitation = "%s is inviting you to join %s."
+
+GuildRedeemErrorInvalidToken = "Sorry, that code is invalid. Please try again."
+GuildRedeemErrorGuildFull = "Sorry, this guild has too many members already."
+
 # FriendInvitee.py
 FriendInviteeTooManyFriends = "%s quer fazer amizade com você, mas você já tem muitos amigos em sua lista!"
 FriendInviteeInvitation = "%s quer fazer amizade com você."
 FriendInviteeOK = lOK
 FriendInviteeNo = "Não"
+GuildInviterWentAway = "%s is no longer present."
+GuildInviterAlready = "%s is already in a guild."
+GuildInviterBusy = "%s is busy right now."
+GuildInviterNotYet = "Invite %s to join your guild?"
+GuildInviterCheckAvailability = "Inviting %s to join your guild."
+GuildInviterOK = lOK
+GuildInviterNo = lNo
+GuildInviterCancel = lCancel
+GuildInviterYes = lYes
+GuildInviterTooFull = "Guild has reached maximum size."
+GuildInviterNo = lNo
+GuildInviterClickToon = "Click on the pirate you would like to invite."
+GuildInviterTooMany = "This is a bug"
+GuildInviterNotAvailable = "%s is busy right now; try again later."
+GuildInviterGuildSaidNo = "%s does not wish to join."
+GuildInviterAlreadyInvited = "%s has already been invited."
+GuildInviterEndGuildship = "Eject %s from the guild?"
+GuildInviterFriendsNoMore = "%s has left the guild."
+GuildInviterSelf = "You are already in the guild!"
+GuildInviterIgnored = "%s is ignoring you."
+GuildInviterAsking = "Asking %s to join the guild."
+GuildInviterGuildSaidYes = "%s will join!"
 
 # FriendInviter.py
 FriendOnline = "has come online."
@@ -735,6 +780,14 @@ FriendInviterFriendSaidNoNewFriends = "%s não está procurando novos amigos no 
 FriendInviterTooMany = "%s já tem amigos demais!"
 FriendInviterMaybe = "%s não conseguiu responder."
 FriendInviterDown = "Não foi possível fazer amizade agora."
+
+#Talk Path Labels
+TalkGuild = "G"
+TalkParty = "P"
+TalkPVP = "PVP"
+
+#Spam Blocked Message
+AntiSpamInChat = "***Spamming***"
 
 #IgnoreConfirm.py
 IgnoreConfirmOK = lOK
@@ -1217,6 +1270,11 @@ SuitFaceoffTaunts = {
            ]
     }
 
+SpeedChatStaticTextCommon = {1: lYes,
+ 2: lNo,
+ 3: lOK,
+ 4: 'SPEEDCHAT PLUS'}
+
 # These are all the standard SpeedChat phrases.
 # The indices must fit into 16 bits (0..65535)
 SpeedChatStaticText = {
@@ -1365,13 +1423,13 @@ SpeedChatStaticText = {
     1102 : "Vamos lutar com %s!" % Cogs,
     1103 : "Vamos tomar um edifício %s!" % Cog,
     1104 : "Vamos entrar no elevador!",
-    1105 : "Vamos para o Centro de Toontown!",
-    1106 : "Vamos para o Porto do Donald!",
-    1107 : "Vamos para a Melodilândia da Minnie!",
-    1108 : "Vamos para os Jardins da Margarida!",
-    1109 : "Vamos para O Brrrgh!",
-    1110 : "Vamos para a Sonholândia do Donald!",
-    1111 : "Vamos para a minha casa!",
+    1105 : "Vamos para o !" % lToontownCentral,
+    1106 : "Vamos para o !" % lDonaldsDock,
+    1107 : "Vamos para a !" % lMinniesMelodyland,
+    1108 : "Vamos para o !" % lDaisyGardens,
+    1109 : "Vamos para !" % lTheBrrrgh,
+    1110 : "Vamos para a !" % lDonaldsDreamland",
+    1111 : "Vamos para o !" % lGoofySpeedway,
     1112 : "Vamos para a minha casa!",
     1113 : "Vamos para a sua casa!",
     1114 : "Vamos para o Quartel do Robô Vendedor!",
@@ -1385,6 +1443,8 @@ SpeedChatStaticText = {
     1122 : "Vamos para o Quartel do Robô da Lei!",
     1123 : "Vamos lutar com o Juiz Chefe!",
     1124 : "Vamos para o Escritório do Promotor Público!",
+    1125 : "Vamos para o !" % lOutdoorZone,
+    1126 : "Vamos para o !" % lGolfZone,
 
     # Toontasks
     1200 : "Em que Tarefa Toon você está trabalhando?",
@@ -1430,7 +1490,7 @@ SpeedChatStaticText = {
     1415 : "Você deve passar.",
     1416 : "Vamos conseguir!",
 
-    # Battle "Vamos usar..."
+    # Battle GAGS
     1500 : "Vamos usar toonar!",
     1501 : "Vamos usar armadilha!",
     1502 : "Vamos usar isca!",
@@ -1619,6 +1679,26 @@ SpeedChatStaticText = {
     2222 : "Eu tenho peso bônus de 11.",
     2223 : "Eu tenho peso bônus de 12.",
 
+    # CEO battle
+    2300 : "Você alimenta os Cogs à esquerda.",
+    2301 : "Vou alimentar os Cogs à esquerda.",
+    2302 : "Você alimenta os Cogs à direita.",
+    2303 : "Vou alimentar os Cogs à direita.",
+    2304 : "Você alimenta os Cogs à frente.",
+    2305 : "Vou alimentar os Cogs à frente.",
+    2306 : "Você alimenta os Cogs de trás.",
+    2307 : "Vou alimentar os Cogs de trás.",
+    2308 : "Você usa a garrafa de água com gás.",
+    2309 : "Vou usar a garrafa de água com gás.",
+    2310 : "Você usa o taco de golfe.",
+    2311 : "Vou usar o taco de golfe.",
+    2312 : "Vou servir esta mesa.",
+    2313 : "Pode servir esta mesa?",
+    2314 : "Alimente o mesmo Cog de novo.",
+    2315 : "Depressa, seu Cog está com fome!",
+    2316 : "Reserve os lanches para Toons mais tristes.",
+    2317 : "Pegue os lanches antes que eles caiam.",
+ 
     #Kart Racing Phrases
     #IMPORTANT: if you change numbers or add/subtract lines here than be
     # sure to adjust the kart racing menu guid dict below
@@ -1630,7 +1710,6 @@ SpeedChatStaticText = {
     3050 : "Não tenho tíquetes suficientes.",
     3060 : "Vamos apostar outra corrida!",
     3061 : "Quer apostar outra corrida?",
-
 
     #Places
     3150 : "Preciso ir à Loja do kart.",
@@ -1703,6 +1782,126 @@ SpeedChatStaticText = {
     #3540 : "Vruum! Vruum!",
     #3560 : "Eu já vi Cogs mais rápidos que isso!",
     #3600 : "Sou o mais rápido dos mais rápidos!",
+
+ # Golf phrases
+
+    # Play
+    4000 : "Vamos jogar minigolfe!",
+    4001 : "Vamos jogar de novo!",
+    4002 : "Quer jogar golfe?",
+
+    # Courses
+    4100 : "Vamos jogar no 'Tacada e Caminhada'.",
+    4101 : "Vamos jogar no 'Tacadas Divertidas'.",
+    4102 : "Vamos jogar no 'Todas as Tacadas'.",
+    4103 : "Esse percurso é fácil demais.",
+    4104 : "Esse percurso é difícil demais.",
+    4105 : "Esse percurso está ótimo.",
+
+    # Tips
+    4200 : "Tente ficar mais para a esquerda.",
+    4201 : "Tente ficar mais para a direita.",
+    4202 : "Tente ficar bem no meio.",
+    4203 : "Tente bater mais forte.",
+    4204 : "Tente bater mais fraco.",
+    4205 : "Tente mirar mais para a esquerda.",
+    4206 : "Tente mirar mais para a direita.",
+    4207 : "Tente mirar bem no meio.",
+
+    # Comments
+    4300 : "Por pouco!",
+    4301 : "Que tacada sensacional!",
+    4302 : "Essa foi uma tacada de sorte.",
+    4303 : "Quero mais uma chance...",
+    4304 : "Essa é muito fácil.",
+    4305 : "Bola!",
+    4306 : "Shhhh!",
+    4307 : "Grande jogo!",
+
+    # Boarding Group phrases
+
+    5000 : "Let's form a Boarding Group.",
+    5001 : "Join my Boarding Group.",
+    5002 : "Can you invite me to your Boarding Group?",
+    5003 : "I'm already in a Boarding Group.",
+    5004 : "Leave your Boarding Group.",
+    5005 : "We are boarding now.",
+    5006 : "Where are we going?",
+    5007 : "Are we ready?",    
+    5008 : "Let's Go!",
+    5009 : "Don't leave this area or you will leave the Boarding Group.",
+
+    # Let's Go to...
+    5100 : "Let's go to the Front Three.",
+    5101 : "Let's go to the Middle Six.",
+    5102 : "Let's go to the Back Nine.",
+    5103 : "Let's go to the C.E.O. Battle.",
+    5104 : "Let's go to the Senior V.P Battle.",
+    5105 : "Let's go to the Front Entrance.",
+    5106 : "Let's go to the Side Entrance.",    
+    5107 : "Let's go to the Coin Mint.",
+    5108 : "Let's go to the Dollar Mint.",
+    5109 : "Let's go to the Bullion Mint.",
+    5110 : "Let's go to the C.F.O. Battle.",
+    5111 : "Let's go to the Chief Justice Battle.",
+    5112 : "Let's go to the Lawbot A Office.",
+    5113 : "Let's go to the Lawbot B Office.",
+    5114 : "Let's go to the Lawbot C Office.",
+    5115 : "Let's go to the Lawbot D Office.",
+
+    # We're going to...
+    5200 : "We're going to the Front Three.",
+    5201 : "We're going to the Middle Six.",
+    5202 : "We're going to the Back Nine.",
+    5203 : "We're going to the C.E.O. Battle.",
+    5204 : "We're going to the Senior V.P Battle.",
+    5205 : "We're going to the Front Entrance.",
+    5206 : "We're going to the Side Entrance.",    
+    5207 : "We're going to the Coin Mint.",
+    5208 : "We're going to the Dollar Mint.",
+    5209 : "We're going to the Bullion Mint.",
+    5210 : "We're going to the C.F.O. Battle.",
+    5211 : "We're going to the Chief Justice Battle.",
+    5212 : "We're going to the Lawbot A Office.",
+    5213 : "We're going to the Lawbot B Office.",
+    5214 : "We're going to the Lawbot C Office.",
+    5215 : "We're going to the Lawbot D Office.",
+
+    # Parties General Phrases
+    5300 : "Let's go to a party.",
+    5301 : "See you at the party!",
+    5302 : "My party has started!",
+    5303 : "Come to my party!",
+    # Parties Phrases when inside a party
+    5304 : "Welcome to my party!",
+    5305 : "This party rules!",
+    5306 : "Your party is fun!",
+    5307 : "It's party time!",
+    5308 : "Time is running out!",
+    5309 : "No cogs allowed!",
+    5310 : "I like this song!",
+    5311 : "This music is great!",
+    5312 : "Cannons are a blast!",
+    5313 : "Watch me jump!",
+    5314 : "Trampolines are fun!",
+    5315 : "Let's play Catch!",
+    5316 : "Let's dance!",
+    5317 : "To the dance floor!",
+    5318 : "Let's play Tug of War!",    
+    5319 : "Start the fireworks!",
+    5320 : "These fireworks are beautiful!",
+    5321 : "Nice decorations.",
+    5322 : "I wish I could eat this cake!",
+        
+    # Promotional Considerations
+    10000 : "A escolha é sua!",
+    10001 : "Você vai votar em quem?",
+    10002 : "A minha candidata é a Galinha!",
+    10003 : "Nada de caca! Vote na Vaca!",
+    10004 : "Não fique no vácuo! Vote no Macaco!",
+    10005 : "Mantenha o curso! Vote no Urso!",
+    10006 : "Pense gordo! Vote no Porco!",
+    10007 : "Vote no Bode - com ele a gente pode!",
 
     # Promotional Considerations
     10000 : "A escolha é sua!",
@@ -2121,37 +2320,102 @@ SpeedChatStaticText = {
     21206: 'Fala!',
 
     # PIRATES
-#    50001 : 'Sim',
-#    50002 : 'Não',
-#    50003 : 'Arrr!',
-#    50004 : "Aye, aye Captain!",
+    50001 : 'Sim',
+    50002 : 'Não',
+    50003 : 'Arrr!',
+    50004 : "Aye, aye Captain!",
 
     # Common Expressions
-#    50100 : "Todos a bordo!",
-#    50101 : "Ei, marujo!",
-#    50102 : "Alto lá!",
-#    50103 : "Abram caminho!",
-#    50104 : "Caramba!",
-#    50105 : "Me explodiram!",
-#    50106 : "Ei, você!",
-#    50107 : "Claro, claro, Capitão!",
-#    50108 : "Ande na prancha!",
-#    50109 : "Continue!",
-#    50110 : "Não vai sobrar ninguém para contar a história....",
+    50100 : "Todos a bordo!",
+    50101 : "Ei, marujo!",
+    50102 : "Alto lá!",
+    50103 : "Abram caminho!",
+    50104 : "Caramba!",
+    50105 : "Me explodiram!",
+    50106 : "Ei, você!",
+    50107 : "Claro, claro, Capitão!",
+    50108 : "Ande na prancha!",
+    50109 : "Continue!",
+    50110 : "Não vai sobrar ninguém para contar a história....",
 
     # Insults
-#    50200 : "Seu rato de porão!",
-#    50201 : "Seu cão sarnento!",
-#    50202 : "Te vejo no fundo do mar!",
-#    50203 : "Patife!",
-#    50204 : "Marujo de terra firme!",
+    50200 : "Seu rato de porão!",
+    50201 : "Seu cão sarnento!",
+    50202 : "Te vejo no fundo do mar!",
+    50203 : "Patife!",
+    50204 : "Marujo de terra firme!",
+    50205 : "Addle-minded fool!",
+    50206 : "You need a sharp sword and sharper wits.",
+    50207 : "Ye be one doubloon short of a full hull mate!",
+    50208 : "Watch yer tongue or I'll pickle it with sea salt!",
+    50209 : "Touch me loot and you get the boot!",
+    50210 : "The horizon be as empty as yer head.",
+    50211 : "You're a canvas shy of a full sail, aren't ye mate?",
 
-    # Places
-#    50300 : "Cadê ocê?",
-#    50301 : "Vamos invadir a cidade!",
-#    50302 : "Vamos para as docas!",
-#    50303 : "Vamos navegar!",
-#    50304 : "Vamos para o bar.",
+    # Compliments
+    50300 : "Nice shootin' matey!",
+    50301 : "A well placed blow!",
+    50302 : "Nice shot!",
+    50303 : "Well met!",
+    50304 : "We showed them!",
+    50305 : "Yer not so bad yerself!",
+    50306 : "A fine plunder haul!",
+
+    # Card Games
+    52400 : "May luck be my lady.",
+    52401 : "I think these cards are marked!",
+    52402 : "Blimey cheater!",
+
+    # Card Games - Poker
+    51900 : "That's a terrible flop!",
+    51901 : "Trying to buy the hand, are you?",
+    51902 : "You're bluffing.",
+    51903 : "I don't think you had it.",
+    51904 : "Saved by the river.",
+
+    # Card Games - Blackjack
+    52600 : "Hit me.",
+    52601 : "Can I get another dealer?",
+
+    # Invitations
+    52100 : "Want to group up?",
+    52101 : "Join my crew?",
+
+    # Invitations - Hunting
+    52200 : "Fight some skeletons?",
+    52201 : "Fight some crabs?",
+
+    # Invitations - Versus
+    52300 : "How about a game of Mayhem?",
+    52301 : "Join my Mayhem game.",
+    52302 : "Want to start a Mayhem game?",
+    52303 : "Want to start a team battle game?",
+    52304 : "Join my team battle game.",
+
+
+    # PLACES - WHERE IS..? - PORT ROYAL (LEGACY)
+    52000 : "",
+
+    # PLACES - WHERE IS..? - PORT ROYAL (Legacy)
+    52000 : "",
+
+    # PLACES - WHERE IS..? - TORTUGA (Legacy)
+    52700 : "",
+
+    # PLACES - WHERE IS..? - PADRES DEL FUEGO (Legacy)
+    53000 : "",
+
+    # PLACES - WHERE IS..? - PADRES DEL FUEGO - LOS PADRES (Legacy)
+    52800 : "",
+
+    # PLACES  - WHERE IS..? - PADRES DEL FUEGO - LAS PULGAS (Legacy)
+    52900 : "",
+
+    # Adventures (LEGACY)
+    50500 : "",
+
+    # Ships (LEGACY)
+    50600 : "",
 
     # Greetings
     60100 : "Oi",
@@ -2194,8 +2458,182 @@ SpeedChatStaticText = {
     60502 : "Vamos para a Discoteca!",
     60503 : "Vamos para Toontown.",
     60504 : "Vamos para os Piratas do Caribe!",
+
+    # Animated Emotes
+    60505 : "Flip coin",
+    60506 : "Dance",
+    60507 : "Chant 1",
+    60508 : "Chant 2",
+    60509 : "Dance a jig",
+    60510 : "Sleep",
+    60511 : "Flex",
+    60512 : "Play Lute",
+    60513 : "Play Flute",
+    60514 : "Frustrated",
+    60515 : "Searching",
+    60516 : "Yawn",
+    60517 : "Kneel",
+    60518 : "Sweep",
+    60519 : "Primp",
+    60520 : "Yawn",
+    60521 : "Dance",
+    60522 : "No",
+    60523 : "Yes",
+    60524 : "Laugh",
+    60525 : "Clap",
+    60526 : "Smile",
+    60527 : "Anger",
+    60528 : "Fear",
+    60529 : "Sad",
+    60530 : "Celebrate",
+    60668 : "Celebrate",
+    60669 : "Sleep",
+    60602 : "Angry",
+    60614 : "Clap",
+    60622 : "Scared",
+    60640 : "Laugh",
+    60652 : "Sad",
+    60657 : "Smile",
+    60664 : "Wave",
+    60665 : "Wink",
+    60666 : "Yawn",
+    60669 : "Sleep",
+    60670 : "Dance",
+    60676 : "Flirt",
+    60677 : "Zombie dance",
+    60678 : "Noisemaker",
+
+    # Valentines day emote string options
+    60671 : "Hello, I'm a Pirate, and I'm here to steal your heart.",
+    60672 : "I just found the treasure I've been searching for.",
+    60673 : "If you were a booger, I'd pick you first.",
+    60674 : "Come to Tortuga often?",
+    60675 : "Do you have a map?  I just keep getting lost in your eyes.",
+
+    65000 : "Yes",
+    65001 : "No",
+
+    # Phrases for April Toon's week
+    60100 : "Happy April Toons' Week!",
+    60101 : "Welcome to my April Toons' Week party!",
+    60110 : "Mickey is in Daisy Gardens.",
+    60111 : "Daisy is in Toontown Central.",
+    60112 : "Minnie is in The Brrrgh.",
+    60113 : "Pluto is in Melodyland.",
+    60114 : "Donald is sleepwalking at the Speedway.",
+    60115 : "Goofy is in Dreamland.",
+    60120 : "Mickey is acting like Daisy!",
+    60121 : "Daisy is acting like Mickey!",
+    60122 : "Minnie is acting like Pluto!",
+    60123 : "Pluto is acting like Minnie!",
+    60124 : "Pluto is talking!",
+    60125 : "Goofy is acting like Donald!",
+    60126 : "Donald is dreaming he is Goofy!",
+    60130 : "Watch how far I can jump.",
+    60131 : "Wow, you jumped really far!",
+    60132 : "Hey, Doodles can talk!",
+    60133 : "Did your Doodle just talk?",
+    60140 : "Things sure are silly around here!",
+    60141 : "How sillier could things get?",
+
+    # Phrases for caroling
+    60200 : "Deck the halls... ",
+    60201 : "Load some pies...",
+    60202 : "Joyful toons...",
+    60203 : "Snowman heads...",
+    60204 : "Toontown's merry...",
+    60205 : "Lure good cheer...",
+
+    60220 : "Deck the halls with seltzer spray!\nHappy Winter Holiday!",
+    60221 : "Load some pies into your sleigh!\nHappy Winter Holiday!",
+    60222 : "Joyful toons bring Cogs dismay!\nHappy Winter Holiday!",
+    60223 : "Snowman heads are hot today!\nHappy Winter Holiday!",
+    60224 : "Toontown's merry, come what may!\nHappy Winter Holiday!",
+    60225 : "Lure good cheer the Toontown way!\nHappy Winter Holiday!",
+
+    # Phrases for Silly Story
+    60301 : "Have you seen the Silly Meter?",
+    60302 : "The Silly Meter is in Toon Hall.",
+    60303 : "Things sure are getting silly around here!",
+    60304 : "I saw a fire hydrant moving!",
+    60305 : "Toontown is coming to life!",
+    60306 : "Have you been to Flippy's new office?",
+    60307 : "I caused a Silly Surge in battle!",
+    60308 : "Let's defeat some Cogs to make Toontown sillier!",
+
+    60309 : "The Silly Meter is bigger and crazier than ever!",
+    60310 : "Lots of hydrants have come alive!",
+    60311 : "I saw a mail box moving!",
+    60312 : "I watched a trash can wake up!",
+    60313 : "How silly can it get?",
+    60314 : "What\'s going to happen next?",
+    60315 : "Something silly, I bet!",
+    60316 : "Have you caused a Silly Surge yet?",
+    60317 : "Let's defeat some Cogs to make Toontown sillier!",
+
+    60318 : "Cog Invasion!",
+    60319 : "Incoming!",
+    60320 : "Let\'s stop those Cogs!",
+    60321 : "I miss the Silly Surges!",
+    60322 : "Let\'s go stop an Invasion!",
+    60323 : "Toontown is sillier than ever now!",
+    60324 : "Have you seen something come alive?",
+    60325 : "My favorites are the fire hydrants!",
+    60326 : "My favorites are the mailboxes!",
+    60327 : "My favorites are the trash cans!",
+
+    60328 : "Hooray! We stopped the Cog invasions!",
+    60329 : "A hydrant helped me in battle!",
+    60330 : "A hydrant boosted my Squirt Gags!",
+    60331 : "A trash can boosted my Toon-Up Gags!",
+    60332 : "A mailbox helped my Throw Gags!",
+
+    # Phrases for Victory Parties (warning 60400 is in use)
+    60350 : "Welcome to my Victory Party!",
+    60351 : "This is a great Victory Party!",
+    60352 : "We showed those Cogs who's boss!",
+    60353 : "Good job helping end the Cog invasions!",
+    60354 : "I bet this is driving the Cogs crazy!",
+
+    60355 : "Let's play Cog-O-War!",
+    60356 : "My team won at Cog-O-War!",
+    60357 : "It's nice to have fire hydrants, trash cans, and mailboxes here!",
+    60358 : "I like the balloon of the Doodle biting the Cog!",
+    60359 : "I like the balloon of the Cog covered in ice cream!",
+    60360 : "I like the wavy Cog that flaps his arms!",
+    60361 : "I jumped on a Cog's face!",
+
+    # Phrases for Singing
+##    9000 : 'Middle ' + 'G1',
+##    9001 : 'Middle ' + 'A',
+##    9002 : 'Middle ' + 'B',
+##    9003 : 'Middle ' + 'C',
+##    9004 : 'Middle ' + 'D',
+##    9005 : 'Middle ' + 'E',
+##    9006 : 'Middle ' + 'F',
+##    9007 : 'Middle ' + 'G2'
     }
 
+# Emote IDs - These are used in SC to determine if a msg is a animated emote
+Emotes_Root = "EMOTES"
+Emotes_Dances = "Dances"
+Emotes_General = "General"
+Emotes_Music = "Music"
+Emotes_Expressions = "Emotions"
+Emote_ShipDenied = "Cannot emote while sailing."
+Emote_MoveDenied = "Cannot emote while moving." 
+Emote_CombatDenied = "Cannot emote while in combat."
+Emote_CannonDenied = "Cannot emote while using a cannon."
+Emote_SwimDenied = "Cannot emote while swimming."
+Emote_ParlorGameDenied = "Cannot emote while playing a parlor game."
+Emotes = (60505, 60506, 60509, 60510, 60511, 60516, 60519, 60520, 60521, 60522, 60523, 60524, 60525, 60526, 60527, 60528, 60529, 60530, 60602, 60668, 60614, 60622, 60640, 60644, 60652, 60657, 60664, 60665, 60666, 60669, 60612, 60661, 60645, 60629, 60641, 60654, 60630, 60670, 60633,
+          # Valentines Day Emote
+          60676,
+          # Yes/No
+          65000, 65001
+          )
+
+SpeedChatStaticTextToontown = SpeedChatStaticText
 
 # These indexes, defined above, will construct a submenu in the FACTORY menu
 # to allow the user to describe all the places he might want to meet
@@ -2631,6 +3069,26 @@ CustomSCStrings = {
     13005 : "Seu sortudo!",
     13006 : "Você é o meu trevo de quatro folhas!",
     13007 : "Você é o meu talismã!",
+ 
+     # Summer Estate Party phrases (seasonal catalog)
+    14000 : "Vamos dar uma festa de verão na Propriedade!",
+    14001 : "É hora da festa!",
+    14002 : "O último a chegar ao lago é um Cog do padre!",
+    14003 : "Hora de treinar Rabisco em Grupo!",
+    14004 : "Hora de treinar Rabisco!",
+    14005 : "Seu Rabisco é legal!",
+    14006 : "Que truques seu Rabisco pode fazer?",
+    14007 : "Hora do Pinball de Canhão!",
+    14008 : "O Pinball de Canhão é demais!",
+    14009 : "Sua Propriedade é demais!",
+    14010 : "Seu Jardim é legal!",
+    14011 : "Sua Propriedade é legal!",
+
+
+
+
+    #Potential racing phrases for purchase
+
     }
 
 # indices into cog phrase arrays
@@ -2792,16 +3250,38 @@ KartRacingMenuSections = [
  "PROVOCAÇÕES"
 ]
 
-GolfMenuSections = [
+AprilToonsMenuSections = [
  -1,
- "COURSES",
- "TIPS",
- "COMMENTS",
+ "GREETINGS",
+ "ESTATE",
+ "QUESTIONS",
+ "ANSWERS"
 ]
 
+GolfMenuSections = [
+ -1,
+ "PERCURSOS",
+ "DICAS",
+ "COMENTÁRIOS",
+]
+
+BoardingMenuSections = [
+"GROUP",
+"Let's go to...",
+"We're going to...",
+-1,
+]
+JellybeanJamMenuSections = [
+ "GET JELLYBEANS", 
+ "SPEND JELLYBEANS"]
+SellbotNerfMenuSections = [
+ -1, 
+ "GROUPING", 
+ "SELLBOT TOWERS/VP"
+]
 WhiteListMenu = [
 -1,
-"WHITELIST"
+"LISTA DE PERMISSÕES"
 ]
 
 # TTAccount.py
@@ -2811,3 +3291,22 @@ TTAccountCallCustomerService = "Favor entrar em contato com o Atendimento ao Con
 TTAccountCustomerServiceHelp = "\nSe precisar de ajuda, favor entrar em contato com o Atendimento ao Comsumidor em %s."
 TTAccountIntractibleError = "Um erro ocorreu."
 
+def timeElapsedString(timeDelta):
+    timeDelta = abs(timeDelta)
+    if timeDelta.days > 0:
+        if timeDelta.days == 1:
+            return "1 day ago"
+        else:
+            return "%s days ago" % timeDelta.days
+
+    elif timeDelta.seconds / 3600 > 0:
+        if timeDelta.seconds / 3600 == 1:
+            return "1 hour ago"
+        else:
+            return "%s hours ago" % (timeDelta.seconds / 3600)
+
+    else:
+        if timeDelta.seconds / 60 < 2:
+            return "1 minute ago"
+        else:
+            return "%s minutes ago" % (timeDelta.seconds / 60)
