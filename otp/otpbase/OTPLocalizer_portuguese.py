@@ -3282,8 +3282,16 @@ SellbotNerfMenuSections = [
  "GROUPING", 
  "SELLBOT TOWERS/VP"
 ]
-WinterMenuSections = ['CAROLING', -1]
-HalloweenMenuSections = [-1]
+
+WinterMenuSections = [
+ "CAROLING",
+ -1
+]
+
+HalloweenMenuSections = [
+ -1
+]
+
 WhiteListMenu = [
 -1,
 "LISTA DE PERMISSÕES"
