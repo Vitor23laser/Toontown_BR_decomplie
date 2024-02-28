@@ -3271,14 +3271,19 @@ BoardingMenuSections = [
 "We're going to...",
 -1,
 ]
+
 JellybeanJamMenuSections = [
  "GET JELLYBEANS", 
- "SPEND JELLYBEANS"]
+ "SPEND JELLYBEANS"
+]
+
 SellbotNerfMenuSections = [
  -1, 
  "GROUPING", 
  "SELLBOT TOWERS/VP"
 ]
+WinterMenuSections = ['CAROLING', -1]
+HalloweenMenuSections = [-1]
 WhiteListMenu = [
 -1,
 "LISTA DE PERMISSÕES"
