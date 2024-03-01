@@ -3292,11 +3292,22 @@ HalloweenMenuSections = [
  -1
 ]
 
+SingingMenuSections = [
+ -1
+]
+
 WhiteListMenu = [
 -1,
 "LISTA DE PERMISSÕES"
 ]
 
+SellbotInvasionMenuSections = [
+ -1
+]
+
+IdesOfMarchMenuSections = [
+ -1
+]
 # TTAccount.py
 # Fill in %s with phone number from account server
 TTAccountCallCustomerService = "Favor entrar em contato com o Atendimento ao Consumidor em %s."
