@@ -189,7 +189,6 @@ CRBootedReasons = {1: 'An unexpected problem has occurred.  Your connection has 
  151: 'You have been logged out by an administrator working on the servers.',
  152: "There has been a reported violation of our Terms of Use connected to '%(name)s'. For more details, please review the message sent to the e-mail address associated with '%(name)s'.",
  153: 'The district you were playing on has been reset.  Everyone who was playing on that district has been disconnected.  However, you should be able to connect again and go right back into the game.',
- 154: 'Toontown is temporarily closing for maintenance. Everyone has been logged out.',
  288: 'Sorry, you have used up all of your available minutes this month.',
  349: 'Sorry, you have used up all of your available minutes this month.'}
 CRBootedReasonUnknownCode = 'An unexpected problem has occurred (error code %s).  Your connection has been lost, but you should be able to connect again and go right back into the game.'
@@ -2892,21 +2891,3 @@ def timeElapsedString(timeDelta):
         return '1 minute ago'
     else:
         return '%s minutes ago' % (timeDelta.seconds / 60)
-
-InjectorTitle = 'Injector'
-InjectorInject = 'Inject'
-InjectorSave = 'Save'
-InjectorLoad = 'Load'
-InjectorRemove = 'Remove'
-InjectorOops = 'Oops!'
-InjectorOhYea = 'Oh yea!'
-InjectorSaveQuestion = 'What do you want to name this code snippet?'
-InjectorNotSaved = 'Your code snippet was not saved!'
-InjectorSnippetExists = 'That snippet already exists. Do you want to replace it with this new one?'
-InjectorSaved = 'Your code snippet was saved under "%s"!'
-InjectorLoadQuestion = 'Which code snippet would you like to load?'
-InjectorOverwriteWarning = 'This will overwrite your current code. Would you like to continue?'
-InjectorLoaded = '"%s" was loaded successfully!'
-InjectorRemoveQuestion = 'Which code snippet would you like to remove?'
-InjectorRemoveWarning = 'This will remove the snippet "%s"! Are you sure you want to do this?'
-InjectorRemoved = '"%s" was removed successfully!'
